@@ -53,3 +53,39 @@ console.log(fruits);
 
 fruits.splice(2,0,"Orange","Guava","Ripe"); //splice method add elements to an array
 console.log(fruits);
+
+
+
+fruits.sort(); //sort an array and alter the main array
+console.log(fruits);
+fruits.reverse(); //reverse an array and alter the main array
+console.log(fruits);
+
+let sorted = fruits.toSorted(); //sort an array and return the new array and does not change main array
+console.log(sorted);
+console.log(fruits);
+
+let reversed = fruits.toReversed(); //reverse an array and does not change the main array
+console.log(reversed);
+
+
+
+// sort ascending numeric value
+let numArray = [40,10,30,100,150,124];
+numArray.sort(function(a,b) { 
+    return a-b;
+});
+console.log(numArray);
+
+// sort descending numeric value
+numArray.sort(function(a,b) { 
+    return b-a;
+});
+console.log(numArray);
+
+//max and min value without array sort
+function maxValueFromArray(arr) {
+    return Math.max.apply(null,arr);
+}
+let max = maxValueFromArray(numArray);
+console.log(max);
